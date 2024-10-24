@@ -34,11 +34,12 @@ function App() {
         <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" ref={input}/>
         <button type='submit' class="btn btn-outline">Get Weather</button>
       </form>
-      <div className='my-10'>
+      <div className='my-10 flex flex-wrap justify-center items-center gap-x-5'>
         {weatherArr.length > 0 ? weatherArr.map((item,index)=>{
           let initialTime = item.location.localtime;
           let finalTime = initialTime.slice(11);
           return (
+            <>
             <WeatherCard 
               time={finalTime} 
               icon={`https:${item.current.condition.icon}`} 
@@ -49,6 +50,7 @@ function App() {
               humidity={item.current.humidity}
               feel={item.current.feelslike_c}
               />
+              </>
           )
         }): <p className='text-center'>{indicator}</p>}
       </div>

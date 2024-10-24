@@ -5,7 +5,7 @@ const WeatherCard = (props) => {
     <>
     <div className="relative flex flex-col my-4 items-center justify-center overflow-hidden">
           <div
-            className="relative flex w-full max-w-72 flex-col items-center overflow-hidden rounded-3xl bg-blue-400 p-6"
+            className="relative flex w-72 max-w-72 flex-col items-center overflow-hidden rounded-3xl bg-blue-400 p-6"
             id="widget"
           >
             <div
